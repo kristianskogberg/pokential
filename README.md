@@ -1,13 +1,19 @@
 # Pokential (WIP)
 A Pokémon Web App I created with React. I practiced mainly Frontend Development using a public Pokémon themed api called PokeApi. The project is still work in progress.
 
-# How to run
+## Packages
+* Tailwind CSS - styling the project
+* React Query and Axios - GET requests from PokeApi
+* React Router - routing and navigation between pages
+* Redux - might be used for state management in the future
+
+## How to run
 1. Download / clone the repo
 2. `cd` into the folder and type `$ npm install` to install the required dependencies
 3. Run the project by typing `$ npm start`
 4. Open [http://localhost:3000](http://localhost:3000) to view it in your browser.
 
-# Preview
+## Preview
 
 Landing page
 
