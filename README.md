@@ -5,6 +5,7 @@ A Pokémon Web App I created with React. I practiced mainly Frontend Development
 1. Download / clone the repo
 2. `cd` into the folder and type `$ npm install` to install the required dependencies
 3. Run the project by typing `$ npm start`
+4. Open [http://localhost:3000](http://localhost:3000) to view it in your browser.
 
 # Preview
 
