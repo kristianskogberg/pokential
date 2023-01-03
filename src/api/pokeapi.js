@@ -56,6 +56,17 @@ export const getSingleType = async ({ queryKey }) => {
   return response.data;
 };
 
+export const getSingleAbility = async ({ queryKey }) => {
+  const [_key, { params }] = queryKey;
+  console.log("get single ability", params.ability);
+
+  const response = await axios.get(
+    `https://pokeapi.co/api/v2/ability/${params.ability}`
+  );
+
+  return response.data;
+};
+
 export const getSinglePokemon = async ({ queryKey }) => {
   const [_key, { params }] = queryKey;
   console.log("get single pokemon", params.pokemon);

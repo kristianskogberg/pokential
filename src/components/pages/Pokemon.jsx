@@ -70,7 +70,6 @@ export default function Pokemon() {
           stats={data?.stats}
         />
         <TypeEffectivenessCard
-          pokemon={capitalizeFirstLetter(data?.name)}
           typeEffectivenesses={calculateTypeEffectivenesses(data?.types)}
         />
         <MovesLearntCard

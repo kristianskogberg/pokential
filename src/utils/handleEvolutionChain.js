@@ -34,7 +34,7 @@ function getEvolutionMethod(evolutionDetails) {
       }
       evolutionMethod =
         formatMethod[evolutionDetails[0].trigger.name] +
-        "holding " +
+        "up holding " +
         article +
         capitalizeFirstLetter(evolutionDetails[0].held_item.name);
     } else if (evolutionDetails[0].min_level !== null) {
@@ -87,7 +87,7 @@ export const handleEvolutionChain = (chain) => {
   let evoChain = [];
   let evoData = chain;
 
-  // console.log("handling evolution chain", evoData);
+  console.log("handling evolution chain", evoData);
 
   do {
     let numberOfEvolutions = evoData.evolves_to.length;
@@ -138,6 +138,6 @@ export const handleEvolutionChain = (chain) => {
   } while (evoData != undefined && evoData.hasOwnProperty("evolves_to"));
 
   const finalEvolutionChain = [evoChain[0]];
-  // console.log("finalEvolutionChain: ", finalEvolutionChain);
+  console.log("finalEvolutionChain: ", finalEvolutionChain);
   return finalEvolutionChain;
 };

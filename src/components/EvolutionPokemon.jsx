@@ -8,7 +8,7 @@ import { capitalizeFirstLetter } from "../utils/capitalizeFirstLetter";
 import { Link } from "react-router-dom";
 
 export default function EvolutionPokemon({ pokemon }) {
-  //console.log(pokemon);
+  console.log(pokemon);
   return (
     <div className="relative flex flex-col md:flex-row items-center justify-end">
       {pokemon.method != null ? (

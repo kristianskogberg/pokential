@@ -1,10 +1,7 @@
 import React from "react";
 import TypeEffectivenessRow from "./TypeEffectivenessRow";
 
-export default function TypeEffectivenessCard({
-  pokemon,
-  typeEffectivenesses,
-}) {
+export default function TypeEffectivenessCard({ typeEffectivenesses }) {
   return (
     <div className="bg-[white] rounded-2xl p-4 w-full grid grid-cols-1 mx-auto my-4">
       <h1 className="text-2xl font-bold border-b pb-2">Type Effectiveness</h1>

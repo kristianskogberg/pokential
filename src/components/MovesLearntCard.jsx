@@ -166,7 +166,10 @@ export default function MovesLearntCard({
                     .sort((a, b) => (a.level > b.level ? 1 : -1))
                     .map((move) => {
                       return (
-                        <tr className="border-b even:bg-gray-100">
+                        <tr
+                          className="border-b even:bg-gray-100"
+                          key={move.name}
+                        >
                           <td scope="row" className=" pl-4 p-2 text-right">
                             {move.level}
                           </td>
@@ -240,7 +243,10 @@ export default function MovesLearntCard({
                           .sort((a, b) => (a.name > b.name ? 1 : -1))
                           .map((move) => {
                             return (
-                              <tr className="border-b even:bg-gray-100">
+                              <tr
+                                className="border-b even:bg-gray-100"
+                                key={move.name}
+                              >
                                 <td scope="row" className="pl-4 p-2 text-left">
                                   <Link
                                     to={`/move/${move.name}`}
@@ -320,7 +326,10 @@ export default function MovesLearntCard({
                           .sort((a, b) => (a.name > b.name ? 1 : -1))
                           .map((move) => {
                             return (
-                              <tr className="border-b even:bg-gray-100">
+                              <tr
+                                className="border-b even:bg-gray-100"
+                                key={move.name}
+                              >
                                 <td scope="row" className="pl-4 p-2 text-left">
                                   <Link
                                     to={`/move/${move.name}`}
@@ -402,7 +411,10 @@ export default function MovesLearntCard({
                         .sort((a, b) => (a.name > b.name ? 1 : -1))
                         .map((move) => {
                           return (
-                            <tr className="border-b even:bg-gray-100">
+                            <tr
+                              className="border-b even:bg-gray-100"
+                              key={move.name}
+                            >
                               {/*
                               <td scope="row" className="p-2 text-right">
                                 {move.number}

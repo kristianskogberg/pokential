@@ -19,7 +19,10 @@ export default function EvolutionCard({ chain }) {
         </p>
       ) : (
         <div className="flex flex-wrap flex-col md:flex-row justify-center pt-4">
-          <EvolutionPokemon pokemon={chain[0]} />
+          {chain.map((currentChain) => (
+            <EvolutionPokemon pokemon={currentChain} />
+          ))}
+
           {/*
           {chain?.map((pokemon, index, arr) => {
             return (
