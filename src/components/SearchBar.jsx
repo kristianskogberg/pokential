@@ -1,6 +1,8 @@
 import React, { useState, useEffect } from "react";
 import { HiOutlineSearch as SearchIcon } from "react-icons/hi";
 import allPokemon from "../api/pokemon.json";
+import allAbilities from "../api/abilities.json";
+import allMovesList from "../api/movesList.json";
 import SearchItem from "./SearchItem";
 import { useNavigate } from "react-router-dom";
 
@@ -9,10 +11,16 @@ export default function SearchBar() {
   const [search, setSearch] = useState("");
   const [suggestions, setSuggestions] = useState([]);
 
+  const everything = allPokemon.results
+    .concat(allAbilities.results)
+    .concat(allMovesList.results);
+
+  console.log(everything);
+
   useEffect(() => {
     if (search.length > 0) {
       setSuggestions(
-        allPokemon.results.filter((pokemon) => pokemon.name.includes(search))
+        everything.filter((pokemon) => pokemon.name.includes(search))
       );
     } else {
       setSuggestions([]);
@@ -27,7 +35,7 @@ export default function SearchBar() {
             className="h-full pl-3 w-full outline-none text-sm text-gray-700 bg-gray-300 pr-2"
             type="text"
             name="search"
-            placeholder="Search for any Pokémon..."
+            placeholder="Search..."
             onChange={(e) => {
               setSearch(e.target.value);
             }}
@@ -39,15 +47,15 @@ export default function SearchBar() {
       </form>
       <div className="relative ">
         <div className="max-h-[500px] w-[300px] shadow-xl absolute overflow-auto rounded-lg text-[black] top-[0]">
-          {suggestions?.map((pokemon, i) => {
+          {suggestions?.map((item, i) => {
             return (
               <div
                 onClick={() => {
-                  navigate("/pokemon/" + pokemon.name);
+                  navigate(`/${item.category}/` + item.name);
                   setSuggestions([]);
                 }}
               >
-                <SearchItem key={i} pokemon={pokemon.name} url={pokemon.url} />
+                <SearchItem key={i} item={item} url={item.url} />
               </div>
             );
           })}

@@ -1,13 +1,20 @@
 import React from "react";
 import { capitalizeFirstLetter } from "../utils/capitalizeFirstLetter";
 
-export default function SearchItem({ pokemon, url }) {
+const formatCategory = {
+  ability: "Ability",
+  pokemon: "Pokémon",
+  move: "Move",
+  item: "Item",
+};
+
+export default function SearchItem({ item, url }) {
   function handleClick() {
     //console.log(pokemon, url);
   }
   return (
     <div
-      className="flex cursor-pointer items-center p-4 bg-[white] hover:bg-gray-200 "
+      className="flex cursor-pointer items-center p-4 bg-[white] hover:bg-gray-200 justify-between"
       onClick={handleClick}
     >
       {/*
@@ -16,7 +23,8 @@ export default function SearchItem({ pokemon, url }) {
         alt={`${pokemon} icon`}
       />
   */}
-      <h2>{capitalizeFirstLetter(pokemon)}</h2>
+      <p className="font-bold">{capitalizeFirstLetter(item.name)}</p>
+      <p className="text-gray-500">{formatCategory[item.category]}</p>
     </div>
   );
 }
