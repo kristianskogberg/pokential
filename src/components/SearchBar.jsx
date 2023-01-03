@@ -30,9 +30,9 @@ export default function SearchBar() {
   return (
     <div className="flex z-10 flex-col justify-between  ">
       <form action="" className="w-[300px]">
-        <div className="relative flex items-center  h-10 rounded-lg  bg-gray-300 overflow-hidden">
+        <div className="relative flex items-center  h-10 rounded-lg text-gray-500 bg-gray-200 overflow-hidden">
           <input
-            className="h-full pl-3 w-full outline-none text-sm text-gray-700 bg-gray-300 pr-2"
+            className="h-full pl-3 w-full outline-none text-sm placeholder-gray-500 text-black pr-2 bg-gray-200"
             type="text"
             name="search"
             placeholder="Search..."
